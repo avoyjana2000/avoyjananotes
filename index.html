@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avoy Jana Notes</title>
+</head>
+<body>
+
+<p>Unlock best way to read Physics with Avoy Jana's meticulously crafted physics notes, your essential companion for pre-MSC and NET exam preparation.</p>
+  
+<h2 id="pdfListTitle">Chapter 1 : Newtonian Mechanics (NM)</h2>
+<div id="pdfListContainer">
+  <ul id="pdfList">
+    <li><a href="#" onclick="loadPDF('1.pdf')">1.1 Newton's law</a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">1.2 Kinematics</a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">1.3 </a></li>
+  </ul>
+</div>
+
+<h3 id="pdfListTitle">Chapter 2 : Classical Mechanics (CM)</h3>
+<div id="pdfListContainer">
+  <ul id="pdfList">
+    <li><a href="#" onclick="loadPDF('1.pdf')">2.1 Generalised c0-ordinate, Constraints</a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">2.2 Lagrangian Mechanics</a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">2.3 Lagrangian of Rigid body</a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">2.4 Action problems </a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">2.5 Lagrange undeterminemd ulptiplier </a></li>
+    <li><a href="#" onclick="loadPDF('ChatGPT.pdf')">2.6 Hamiltonian Mechanics </a></li>
+  </ul>
+</div>
+<script>
+function loadPDF(pdfSrc) {
+  var pdfContainer = document.getElementById("pdfContainer");
+  pdfContainer.innerHTML = '<embed src="' + pdfSrc + '" type="application/pdf" width="100%" height="800px" />';
+  
+  // Hide the PDF list container
+  var pdfListContainer = document.getElementById("pdfListContainer");
+  pdfListContainer.style.display = "none";
+  
+  // Remove the PDF list title
+  var pdfListTitle = document.getElementById("pdfListTitle");
+  pdfListTitle.style.display = "none";
+  
+  // Show a back button
+  var backButton = document.createElement("button");
+  backButton.textContent = "Back to PDF List";
+  backButton.onclick = function() {
+    // Reload the page to show the PDF list again
+    location.reload();
+  };
+  document.body.insertBefore(backButton, pdfContainer);
+}
+</script>
+
+</body>
+</html>
